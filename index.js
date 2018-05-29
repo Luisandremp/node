@@ -3,7 +3,7 @@ var http = require('http').Server(app);
 var io = require('socket.io')(http);
 
 app.get('/', function(req, res){
-  res.sendFile(__dirname + '/index.html');
+  res.sendFile('http://node-luisandrelearning.7e14.starter-us-west-2.openshiftapps.com/index.html');
 });
 
 io.on('connection', function(socket){
@@ -23,6 +23,6 @@ io.on('connection', function(socket){
   
 })
 
-http.listen(3000, function(){
+http.listen(8080, function(){
   //console.log('listening on *:3000');
 });
